@@ -1,0 +1,30 @@
+<% include header %>
+	<div class="row">
+		<div class="col-xs-12">
+			<br />
+			<br />
+			<br />
+			<br />
+			<h3>Összes étel </h3>
+			<a href="/list/add" class="btn btn-primary">Új recept</a>
+			<br />
+			<br />
+			<br />
+			<table class="table table-striped">
+				<tr><%food.forEach(function(food,index){-%>				
+					<td>
+						<a href="/list/<%= food.id %>"><img src="http://placehold.it/300x200"/></a>  <br /> 
+					</td>
+					<td>
+						<a href="/list/<%= food.id %>"><%= food.name %> </a><br /> 
+						<a href="/list/<%= food.id %>"><%= food.calorie %> </a><br /> 
+						<a href="/list/<%= food.id %>"><%= food.time %> </a><br />						
+					</td>						
+				<%if(index%2==1){ -%></tr><tr><% } -%>
+				<% }); -%>
+				</tr>
+			</table>
+			
+		</div>
+	</div>
+<% include footer %>

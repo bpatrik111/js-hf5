@@ -1,0 +1,19 @@
+<% include outsideHeader %>
+	<h3>Bejelentkezés </h3>
+	<br />
+	<form action="/list">
+	  <div class="form-group">
+		<label for="exampleInputEmail1">Email address</label>
+		<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email-cím">
+	  </div>
+	  <div class="form-group">
+		<label for="exampleInputPassword1">Password</label>
+		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Jelszó">
+	  </div>	
+	  <a href="/forgotpw" >elfelejtettem a jelszót</a><br /><br />
+	  <button type="submit" class="btn btn-primary">Bejelentkezés</button>	 
+		<a href="/register" class="btn btn-primary">Regisztráció</a>	  
+		
+	</form>
+	<br />
+<% include footer %>
